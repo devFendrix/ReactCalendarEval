@@ -20,14 +20,14 @@ export const useDate = (events, nav) => {
 
     const firstDayOfMonth = new Date(year, month, 1);
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const dateString = firstDayOfMonth.toLocaleDateString('fr-FR', {
+    const dateString = firstDayOfMonth.toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
       month: 'numeric',
       day: 'numeric',
     });
 
-    setDateDisplay(`${dt.toLocaleDateString('fr-FR', { month: 'long' })} ${year}`);
+    setDateDisplay(`${dt.toLocaleDateString('en-US', { month: 'long' })} ${year}`);
     const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
     const daysArr = [];
